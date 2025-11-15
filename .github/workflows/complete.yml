@@ -24,8 +24,8 @@ jobs:
       - name: bundling code to zip
         run: zip -r code.zip ./
         
-      - name: unit test
-        run: npm test
+      - name: Run tests and generate coverage
+        run: npm test -- --coverage
         
       - name: test reporter
         uses: mridang/action-test-reporter@v1.7.0
