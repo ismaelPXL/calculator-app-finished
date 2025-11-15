@@ -19,3 +19,5 @@ jobs:
         run: ls -alhR 
       - name: bundling code to zip
         run: zip -r code.zip ./
+      - name: unit test
+        run: npm test
