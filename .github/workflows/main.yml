@@ -4,8 +4,10 @@ on:
   push:
 
 jobs:
+  # build:
   docker:
     runs-on: ubuntu-latest
+    environment: DOCKER
     steps:
       -
         name: Login to Docker Hub
