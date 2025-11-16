@@ -18,11 +18,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
         
-      - name: listing content    
-        run: ls -alhR 
+      # - name: listing content    
+      #   run: ls -alhR 
         
-      - name: bundling code to zip
-        run: zip -r code.zip ./
+      # - name: bundling code to zip
+      #   run: zip -r code.zip ./
         
       - name: Run tests and generate coverage
         run: npm test -- --coverage
@@ -45,3 +45,6 @@ jobs:
         with:
           push: true
           tags: izzy84/calculator-app-finished:latest
+
+      - name: Scanning for CVE's
+        uses: docker/scout-action@v1
